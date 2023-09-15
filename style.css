@@ -1,13 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Martian+Mono:wght@400;600&family=Montserrat:wght@200;400;700&family=Nunito:wght@400;700&family=Poppins:wght@300;500&family=Raleway:wght@400;500&family=Roboto:wght@300;500&display=swap');
 *{
     margin: 0;
     padding: 0;
+}
+h1, h2, h3 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+}
+h4, h5, h6 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 300;
 }
 header{
     grid-area: header;
     background-color: rgb(35, 35, 122);
     color: azure;
-    height: 40px;
+    height: 50px;
     text-align: center;
+    padding: 10px;
+    
 }
 menu {
     grid-area: menu;
@@ -25,10 +36,47 @@ footer {
 }
 .grid-container {
     display: grid;
-    grid-template-columns: 1fr 4fr;
+    grid-template-columns: 1fr 7fr;
     grid-template-areas: 
     "header header"
     "menu main"
     "footer footer";
 }
 
+.categorias{
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    height: 100vh;
+}
+.productos {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr ;
+    gap: 20px;
+    padding-top: 20px;
+}
+.card {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    width: 300px;
+    text-align: center;
+}
+.card img {
+    width: auto;
+}
+.card .info {
+    padding: 20px;
+}
+
+button  {
+    background-color:rgb(35, 35, 122) ;
+    color: white;
+    padding: 10px;
+}
+button a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+
+}
