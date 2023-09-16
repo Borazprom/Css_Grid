@@ -7,7 +7,7 @@ h1, h2, h3 {
     font-family: 'Poppins', sans-serif;
     font-weight: 500;
 }
-h4, h5, h6 {
+h4, h5, h6, p {
     font-family: 'Poppins', sans-serif;
     font-weight: 300;
 }
@@ -23,12 +23,12 @@ header{
 menu {
     grid-area: menu;
     background-color: rgb(210, 210, 210);
-    border: solid 1px black;
+    
 }
 main {
     grid-area: main;
     background-color: rgb(210, 210, 210);
-    border: solid 1px black;
+    
 }
 footer {
     grid-area: footer;
@@ -49,6 +49,7 @@ footer {
     padding: 20px;
     height: 100vh;
 }
+/* seccion productos */
 .productos {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr ;
@@ -59,7 +60,7 @@ footer {
     display: flex;
     flex-direction: column;
     background-color: white;
-    width: 300px;
+    width: 500px;
     text-align: center;
 }
 .card img {
@@ -68,8 +69,12 @@ footer {
 .card .info {
     padding: 20px;
 }
+.card .info p {
+    font-size: 20px;
+    padding: 10px;
+}
 
-button  {
+.card button  {
     background-color:rgb(35, 35, 122) ;
     color: white;
     padding: 10px;
