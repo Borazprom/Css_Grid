@@ -59,18 +59,12 @@ footer {
     "footer footer";
 }
 
-.categorias{
-    /* display: flex;
-    flex-direction: column;
-    padding: 20px;
-    height: 100vh; */
-}
 /* seccion productos */
 .productos {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr ;
     gap: 20px;
-    padding-top: 20px;
+    padding: 20px 0 20px 0;
 }
 .card {
     display: flex;
@@ -100,4 +94,8 @@ button a {
     text-decoration: none;
     font-size: 18px;
 
+}
+
+footer {
+    padding: 20px;
 }
