@@ -1,25 +1,39 @@
+/* Google Font */
 @import url('https://fonts.googleapis.com/css2?family=Martian+Mono:wght@400;600&family=Montserrat:wght@200;400;700&family=Nunito:wght@400;700&family=Poppins:wght@300;500&family=Raleway:wght@400;500&family=Roboto:wght@300;500&display=swap');
 *{
     margin: 0;
     padding: 0;
+    font-family: 'Poppins', sans-serif;
 }
 h1, h2, h3 {
-    font-family: 'Poppins', sans-serif;
     font-weight: 500;
 }
+
 h4, h5, h6, p {
-    font-family: 'Poppins', sans-serif;
     font-weight: 300;
 }
+
+/* contenedor padre */
+.grid-container {
+    display: grid;
+    grid-template-columns: 15% 85%;
+    grid-template-areas: 
+    "header header"
+    "menu main"
+    "footer footer";
+}
+
+/* Header */
 header{
     grid-area: header;
     background-color: rgb(35, 35, 122);
     color: azure;
     height: 50px;
     text-align: center;
-    padding: 10px;
-    
+    padding: 15px;
 }
+
+/* Menu Lateral*/
 menu {
     grid-area: menu;
     background-color: rgb(210, 210, 210);
@@ -41,61 +55,53 @@ menu p {
     padding-left: 10px;
 }
 
+/* seccion productos */
 main {
     grid-area: main;
-    background-color: rgb(210, 210, 210);
-    
 }
-footer {
-    grid-area: footer;
-    text-align: center;
-}
-.grid-container {
-    display: grid;
-    grid-template-columns: 1fr 7fr;
-    grid-template-areas: 
-    "header header"
-    "menu main"
-    "footer footer";
-}
-
-/* seccion productos */
-.productos {
+main .productos {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr ;
+    background-color: rgb(210, 210, 210);
     gap: 20px;
-    padding: 20px 0 20px 0;
+    padding: 20px 20px 20px ;
 }
-.card {
+main .productos .card {
     display: flex;
     flex-direction: column;
     background-color: white;
-    width: 500px;
+    width: auto;
     text-align: center;
 }
-.card img {
-    width: auto;
+main .productos .card img {
+    width: 100%;
 }
-.card .info {
+main .productos .card .info {
     padding: 20px;
 }
-.card .info p {
+main .productos .card .info p {
     font-size: 20px;
     padding: 10px;
 }
-
-.card button  {
+main .productos .card button  {
     background-color:rgb(35, 35, 122) ;
     color: white;
     padding: 10px;
 }
-button a {
+main .productos .card button:hover {
+    background-color: rgb(46, 46, 165);
+
+}
+main .productos .card button a {
     color: white;
     text-decoration: none;
     font-size: 18px;
-
 }
 
+
+ /* footer */
 footer {
     padding: 20px;
+    grid-area: footer;
+    text-align: center;
 }
